@@ -8,6 +8,6 @@ namespace P_BrawlStars.Clases
 {
     internal class ConexionSQL
     {
-        public string Conexion = "Data source = LAPTOP-81JTM6SA; Initial Catalog = BrawlStars2; User ID = sa; Password = Mexico02;";
+        public string Conexion = "Data source = LAPTOP-81JTM6SA; Initial Catalog = BrawlStars3; User ID = sa; Password = Mexico02;";
     }
 }

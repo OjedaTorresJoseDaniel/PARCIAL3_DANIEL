@@ -104,18 +104,6 @@ namespace P_BrawlStars.Formularios
             con.Close();
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            if (txtId.Text == "0" || txtId.Text == "")
-            {
-                MessageBox.Show("ID no valido");
-            }
-            else
-            {
-                obtener();
-            }
-        }
-
         private void tsLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
@@ -127,6 +115,18 @@ namespace P_BrawlStars.Formularios
             x.id = int.Parse(txtId.Text);
             MessageBox.Show(x.Eliminar());
 
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            if (txtId.Text == "0" || txtId.Text == "")
+            {
+                MessageBox.Show("ID no valido");
+            }
+            else
+            {
+                obtener();
+            }
         }
     }
 }

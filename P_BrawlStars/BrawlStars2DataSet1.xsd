@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BrawlStars2DataSet1" targetNamespace="http://tempuri.org/BrawlStars2DataSet1.xsd" xmlns:mstns="http://tempuri.org/BrawlStars2DataSet1.xsd" xmlns="http://tempuri.org/BrawlStars2DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BrawlStars2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BrawlStars2ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.P_BrawlStars.Properties.Settings.GlobalReference.Default.BrawlStars2ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vFuerzaTableAdapter" GeneratorDataComponentClassName="vFuerzaTableAdapter" Name="vFuerza" UserDataComponentName="vFuerzaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BrawlStars2ConnectionString (Settings)" DbObjectName="BrawlStars2.dbo.vFuerza" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, idSalud, idAtaque, idSuper, Nivel, Salud, Ataque, Super FROM dbo.vFuerza</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="idSalud" DataSetColumn="idSalud" />
+              <Mapping SourceColumn="idAtaque" DataSetColumn="idAtaque" />
+              <Mapping SourceColumn="idSuper" DataSetColumn="idSuper" />
+              <Mapping SourceColumn="Nivel" DataSetColumn="Nivel" />
+              <Mapping SourceColumn="Salud" DataSetColumn="Salud" />
+              <Mapping SourceColumn="Ataque" DataSetColumn="Ataque" />
+              <Mapping SourceColumn="Super" DataSetColumn="Super" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BrawlStars2DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="BrawlStars2DataSet1" msprop:Generator_DataSetName="BrawlStars2DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vFuerza" msprop:Generator_RowEvHandlerName="vFuerzaRowChangeEventHandler" msprop:Generator_RowDeletedName="vFuerzaRowDeleted" msprop:Generator_RowDeletingName="vFuerzaRowDeleting" msprop:Generator_RowEvArgName="vFuerzaRowChangeEvent" msprop:Generator_TablePropName="vFuerza" msprop:Generator_RowChangedName="vFuerzaRowChanged" msprop:Generator_RowChangingName="vFuerzaRowChanging" msprop:Generator_TableClassName="vFuerzaDataTable" msprop:Generator_RowClassName="vFuerzaRow" msprop:Generator_TableVarName="tablevFuerza" msprop:Generator_UserTableName="vFuerza">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="idSalud" msprop:Generator_ColumnPropNameInRow="idSalud" msprop:Generator_ColumnPropNameInTable="idSaludColumn" msprop:Generator_ColumnVarNameInTable="columnidSalud" msprop:Generator_UserColumnName="idSalud" type="xs:int" minOccurs="0" />
+              <xs:element name="idAtaque" msprop:Generator_ColumnPropNameInRow="idAtaque" msprop:Generator_ColumnPropNameInTable="idAtaqueColumn" msprop:Generator_ColumnVarNameInTable="columnidAtaque" msprop:Generator_UserColumnName="idAtaque" type="xs:int" minOccurs="0" />
+              <xs:element name="idSuper" msprop:Generator_ColumnPropNameInRow="idSuper" msprop:Generator_ColumnPropNameInTable="idSuperColumn" msprop:Generator_ColumnVarNameInTable="columnidSuper" msprop:Generator_UserColumnName="idSuper" type="xs:int" minOccurs="0" />
+              <xs:element name="Nivel" msprop:Generator_ColumnPropNameInRow="Nivel" msprop:Generator_ColumnPropNameInTable="NivelColumn" msprop:Generator_ColumnVarNameInTable="columnNivel" msprop:Generator_UserColumnName="Nivel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Salud" msprop:Generator_ColumnPropNameInRow="Salud" msprop:Generator_ColumnPropNameInTable="SaludColumn" msprop:Generator_ColumnVarNameInTable="columnSalud" msprop:Generator_UserColumnName="Salud">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="22" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ataque" msprop:Generator_ColumnPropNameInRow="Ataque" msprop:Generator_ColumnPropNameInTable="AtaqueColumn" msprop:Generator_ColumnVarNameInTable="columnAtaque" msprop:Generator_UserColumnName="Ataque">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Super" msprop:Generator_ColumnPropNameInRow="Super" msprop:Generator_ColumnPropNameInTable="SuperColumn" msprop:Generator_ColumnVarNameInTable="columnSuper" msprop:Generator_UserColumnName="Super">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vFuerza" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

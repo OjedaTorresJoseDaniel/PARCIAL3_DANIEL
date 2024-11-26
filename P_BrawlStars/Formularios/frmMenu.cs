@@ -143,5 +143,11 @@ namespace P_BrawlStars.Formularios
             frmEstadisticasDelBrawler x = new frmEstadisticasDelBrawler();
             x.Show();
         }
+
+        private void tsBrawlers_Click(object sender, EventArgs e)
+        {
+            frmBrawler x = new frmBrawler();
+            x.Show();
+        }
     }
 }

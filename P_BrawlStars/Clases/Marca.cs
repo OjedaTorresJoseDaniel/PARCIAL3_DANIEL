@@ -41,7 +41,7 @@ namespace P_BrawlStars.Clases
         public string actualizar()
         {
             string msj = "";
-            string consulta = $"update Marca set NumeroDeMarca = '{NumeroDeMarca}',id Copa = {idCopa} where id = {id}";
+            string consulta = $"update Marca set NumeroDeMarca = '{NumeroDeMarca}',idCopa = {idCopa} where id = {id}";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteNonQuery();

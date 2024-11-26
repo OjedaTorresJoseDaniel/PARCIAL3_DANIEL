@@ -44,9 +44,9 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(479, 76);
+            this.btnBuscar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(374, 124);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(128, 57);
@@ -61,13 +61,13 @@
             this.txtId.Location = new System.Drawing.Point(89, 69);
             this.txtId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(316, 28);
+            this.txtId.Size = new System.Drawing.Size(61, 28);
             this.txtId.TabIndex = 75;
             // 
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(89, 105);
+            this.txtNombre.Location = new System.Drawing.Point(291, 69);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(316, 28);
@@ -76,29 +76,30 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(8, 108);
+            this.label2.Location = new System.Drawing.Point(210, 72);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
+            this.label2.Size = new System.Drawing.Size(74, 19);
             this.label2.TabIndex = 73;
             this.label2.Text = "Nombre";
             // 
             // id
             // 
             this.id.AutoSize = true;
-            this.id.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.id.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.id.Location = new System.Drawing.Point(51, 72);
             this.id.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(27, 21);
+            this.id.Size = new System.Drawing.Size(29, 19);
             this.id.TabIndex = 72;
             this.id.Text = "ID";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.BackColor = System.Drawing.Color.IndianRed;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsGuardar,
             this.tsBuscar,
@@ -159,6 +160,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtId);

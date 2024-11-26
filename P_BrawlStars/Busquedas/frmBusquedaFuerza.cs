@@ -38,7 +38,7 @@ namespace P_BrawlStars.Busquedas
         {
             DataTable dt = new DataTable();
             con.Open();
-            SqlCommand cmd = new SqlCommand($"Select * from Fuerza where Nombre LIKE '%{txtFiltro.Text}%'", con);
+            SqlCommand cmd = new SqlCommand($"Select * from Fuerza where Nivel LIKE '%{txtFiltro.Text}%'", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             dgFuerza.DataSource = dt;

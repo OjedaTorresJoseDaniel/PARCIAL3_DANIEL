@@ -142,5 +142,11 @@ namespace P_BrawlStars.Formularios
         {
             limpiar();
         }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            INFORMES.frmRMarca m = new INFORMES.frmRMarca();
+            m.ShowDialog();
+        }
     }
 }

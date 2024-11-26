@@ -28,14 +28,14 @@ namespace P_BrawlStars.Clases
             string msj = "";
             try
             {
-                string consulta = $"insert into Hipercarga(id, Nombre, Velocidad, Daño, Escudo, H_Super) Values({id}, '{Nombre}', '{Velocidad}', '{Daño}','{Escudo}','{H_Super}')";
+                string consulta = $"insert into Hipercarga (id, Nombre, H_Super, Velocidad, Daño, Escudo) Values({id}, '{Nombre}','{H_Super}', '{Velocidad}', '{Daño}','{Escudo}')";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(consulta, con);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 msj = "Proceso Exitoso";
             }
-            catch
+           catch
             {
                 msj = "¡¡¡¡¡¡Error!!!!!!";
             }

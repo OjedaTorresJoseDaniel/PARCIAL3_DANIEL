@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRMarcas" targetNamespace="http://tempuri.org/dsRMarcas.xsd" xmlns:mstns="http://tempuri.org/dsRMarcas.xsd" xmlns="http://tempuri.org/dsRMarcas.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BrawlStars3ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BrawlStars3ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.P_BrawlStars.Properties.Settings.GlobalReference.Default.BrawlStars3ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vMarcaTableAdapter" GeneratorDataComponentClassName="vMarcaTableAdapter" Name="vMarca" UserDataComponentName="vMarcaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BrawlStars3ConnectionString (Settings)" DbObjectName="BrawlStars3.dbo.vMarca" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, NumeroDeMarca, idCopa, NumeroDeCopas FROM dbo.vMarca</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="NumeroDeMarca" DataSetColumn="NumeroDeMarca" />
+              <Mapping SourceColumn="idCopa" DataSetColumn="idCopa" />
+              <Mapping SourceColumn="NumeroDeCopas" DataSetColumn="NumeroDeCopas" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRMarcas" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="dsRMarcas" msprop:Generator_DataSetName="dsRMarcas">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vMarca" msprop:Generator_RowEvHandlerName="vMarcaRowChangeEventHandler" msprop:Generator_RowDeletedName="vMarcaRowDeleted" msprop:Generator_RowDeletingName="vMarcaRowDeleting" msprop:Generator_RowEvArgName="vMarcaRowChangeEvent" msprop:Generator_TablePropName="vMarca" msprop:Generator_RowChangedName="vMarcaRowChanged" msprop:Generator_RowChangingName="vMarcaRowChanging" msprop:Generator_TableClassName="vMarcaDataTable" msprop:Generator_RowClassName="vMarcaRow" msprop:Generator_TableVarName="tablevMarca" msprop:Generator_UserTableName="vMarca">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="NumeroDeMarca" msprop:Generator_ColumnPropNameInRow="NumeroDeMarca" msprop:Generator_ColumnPropNameInTable="NumeroDeMarcaColumn" msprop:Generator_ColumnVarNameInTable="columnNumeroDeMarca" msprop:Generator_UserColumnName="NumeroDeMarca">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idCopa" msprop:Generator_ColumnPropNameInRow="idCopa" msprop:Generator_ColumnPropNameInTable="idCopaColumn" msprop:Generator_ColumnVarNameInTable="columnidCopa" msprop:Generator_UserColumnName="idCopa" type="xs:int" minOccurs="0" />
+              <xs:element name="NumeroDeCopas" msprop:Generator_ColumnPropNameInRow="NumeroDeCopas" msprop:Generator_ColumnPropNameInTable="NumeroDeCopasColumn" msprop:Generator_ColumnVarNameInTable="columnNumeroDeCopas" msprop:Generator_UserColumnName="NumeroDeCopas" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vMarca" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

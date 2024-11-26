@@ -40,7 +40,7 @@ namespace P_BrawlStars.Clases
         public string actualizar()
         {
             string msj = "";
-            string consulta = $"update Tipo set Nombre = '{Nombre}', where id = {id}";
+            string consulta = $"update Tipo set Nombre = '{Nombre}' where id = {id}";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteNonQuery();

@@ -28,7 +28,7 @@ namespace P_BrawlStars.Clases
             string msj = "";
             try
             {
-                string consulta = $"insert into Fuerza (id,Nombre,idSalud,idAtaque,idSuper) Values ({id},'{Nombre}',{idSalud},{idAtaque},{idSuper})";
+                string consulta = $"insert into Fuerza (id,Nivel,idSalud,idAtaque,idSuper) Values ({id},'{Nombre}',{idSalud},{idAtaque},{idSuper})";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(consulta, con);
                 cmd.ExecuteNonQuery();
@@ -44,7 +44,7 @@ namespace P_BrawlStars.Clases
         public string actualizar()
         {
             string msj = "";
-            string consulta = $"update Fuerza set Nombre = '{Nombre}', idSalud = {idSalud}, idAtaque = {idAtaque}, idSuper = {idSuper}, where id = {id}";
+            string consulta = $"update Fuerza set Nivel = '{Nombre}', idSalud = {idSalud}, idAtaque = {idAtaque}, idSuper = {idSuper} where id = {id}";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteNonQuery();

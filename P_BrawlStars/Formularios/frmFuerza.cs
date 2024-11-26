@@ -128,7 +128,7 @@ namespace P_BrawlStars.Formularios
             if (x.DialogResult == DialogResult.OK)
             {
                 txtId.Text = x.dgFuerza.SelectedRows[0].Cells["id"].Value.ToString();
-                txtNombre.Text = x.dgFuerza.SelectedRows[0].Cells["Nombre"].Value.ToString();
+                txtNombre.Text = x.dgFuerza.SelectedRows[0].Cells["Nivel"].Value.ToString();
                 cbSalud.SelectedValue = x.dgFuerza.SelectedRows[0].Cells["idSalud"].Value;
                 cbAtaque.SelectedValue = x.dgFuerza.SelectedRows[0].Cells["idAtaque"].Value;
                 cbSuper.SelectedValue = x.dgFuerza.SelectedRows[0].Cells["idSuper"].Value;
@@ -143,7 +143,7 @@ namespace P_BrawlStars.Formularios
             if (reader.Read())
             {
                 txtId.Text = reader["id"].ToString();
-                txtNombre.Text = reader["Nombre"].ToString();
+                txtNombre.Text = reader["Nivel"].ToString();
                 cbSalud.SelectedValue = int.Parse(reader["idSalud"].ToString());
                 cbAtaque.SelectedValue = int.Parse(reader["idAtaque"].ToString());
                 cbSuper.SelectedValue = int.Parse(reader["idSuper"].ToString());
@@ -180,6 +180,12 @@ namespace P_BrawlStars.Formularios
         private void tsLimpiar_Click(object sender, EventArgs e)
         {
             limpiar();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            INFORMES.frmRFuerza f = new INFORMES.frmRFuerza();
+            f.ShowDialog();
         }
     }
 }

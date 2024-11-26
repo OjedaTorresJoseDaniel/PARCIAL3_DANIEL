@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSegundoGadget));
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -36,93 +41,14 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcion.Location = new System.Drawing.Point(120, 151);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(665, 28);
-            this.txtDescripcion.TabIndex = 68;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(11, 154);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 21);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "Descripcion";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(519, 79);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(122, 54);
-            this.btnBuscar.TabIndex = 66;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtId
-            // 
-            this.txtId.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(103, 57);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(55, 28);
-            this.txtId.TabIndex = 65;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(120, 105);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(316, 28);
-            this.txtNombre.TabIndex = 64;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(26, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 21);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Nombre";
-            // 
-            // ID
-            // 
-            this.ID.AutoSize = true;
-            this.ID.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ID.Location = new System.Drawing.Point(65, 60);
-            this.ID.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(27, 21);
-            this.ID.TabIndex = 62;
-            this.ID.Text = "ID";
             // 
             // toolStrip1
             // 
-            this.toolStrip1.BackColor = System.Drawing.SystemColors.Control;
+            this.toolStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsGuardar,
             this.tsBuscar,
@@ -179,11 +105,103 @@
             this.tsEliminar.Text = "Elminar";
             this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescripcion.Location = new System.Drawing.Point(131, 159);
+            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(656, 28);
+            this.txtDescripcion.TabIndex = 68;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(13, 166);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 19);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Descripcion";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBuscar.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Location = new System.Drawing.Point(323, 215);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(232, 62);
+            this.btnBuscar.TabIndex = 66;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(114, 103);
+            this.txtId.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(25, 28);
+            this.txtId.TabIndex = 65;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(409, 85);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(316, 28);
+            this.txtNombre.TabIndex = 64;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(319, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 19);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Nombre";
+            // 
+            // ID
+            // 
+            this.ID.AutoSize = true;
+            this.ID.BackColor = System.Drawing.Color.DarkGreen;
+            this.ID.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.ForeColor = System.Drawing.Color.Gold;
+            this.ID.Location = new System.Drawing.Point(110, 81);
+            this.ID.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+            this.ID.Name = "ID";
+            this.ID.Size = new System.Drawing.Size(29, 19);
+            this.ID.TabIndex = 62;
+            this.ID.Text = "ID";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::P_BrawlStars.Properties.Resources.download__2_;
+            this.pictureBox1.Location = new System.Drawing.Point(83, 54);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(82, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmSegundoGadget
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 320);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
@@ -191,19 +209,26 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ID);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.toolStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSegundoGadget";
             this.Text = "frmSegundoGadget";
             this.Load += new System.EventHandler(this.frmSegundoGadget_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton tsGuardar;
+        private System.Windows.Forms.ToolStripButton tsBuscar;
+        private System.Windows.Forms.ToolStripButton tsLimpiar;
+        private System.Windows.Forms.ToolStripButton tsEliminar;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
@@ -211,10 +236,6 @@
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ID;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton tsGuardar;
-        private System.Windows.Forms.ToolStripButton tsBuscar;
-        private System.Windows.Forms.ToolStripButton tsLimpiar;
-        private System.Windows.Forms.ToolStripButton tsEliminar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

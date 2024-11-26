@@ -30,7 +30,7 @@ namespace P_BrawlStars.Clases
         public int idPrimer_Estelar;
         public int idSegunda_Estelar;
         public int idHipercarga;
-        public int idEstadisticasDelBrawler;
+        public int idFuerza;
 
         public Brawler()
         {
@@ -42,7 +42,7 @@ namespace P_BrawlStars.Clases
             string msj = "";
             try
             {
-                string consulta = $"insert into Brawler (id,Nombre,Descripcion,idCalidad,idTipo,idMarca,idRefuerzo1,idRefuerzo2,idRefuerzo3,idRefuerzo4,idRefuerzo5,idRefuerzo6,idRefuerzo7,idGadget_Uno,idGadget_Dos,idPrimer_Estelar,idSegunda_Estelar,idHipercarga,idEstadisticasDelBrawler) Values ({id},'{Nombre}',{Descripcion},{idCalidad},{idTipo},{idMarca},{idRefuerzo1},{idRefuerzo2},{idRefuerzo3},{idRefuerzo4},{idRefuerzo5},{idRefuerzo6},{idRefuerzo7},{idGadget_Uno},{idGadget_Dos},{idPrimer_Estelar},{idPrimer_Estelar},{idHipercarga},{idEstadisticasDelBrawler})";
+                string consulta = $"insert into Brawler (id,Nombre,Descripcion,idCalidad,idTipo,idMarca,idRefuerzo1,idRefuerzo2,idRefuerzo3,idRefuerzo4,idRefuerzo5,idRefuerzo6,idRefuerzo7,idGadget_Uno,idGadget_Dos,idPrimer_Estelar,idSegunda_Estelar,idHipercarga,idFuerza) Values ({id},'{Nombre}','{Descripcion}',{idCalidad},{idTipo},{idMarca},{idRefuerzo1},{idRefuerzo2},{idRefuerzo3},{idRefuerzo4},{idRefuerzo5},{idRefuerzo6},{idRefuerzo7},{idGadget_Uno},{idGadget_Dos},{idPrimer_Estelar},{idPrimer_Estelar},{idHipercarga},{idFuerza})";
                 con.Open();
                 SqlCommand cmd = new SqlCommand(consulta, con);
                 cmd.ExecuteNonQuery();
@@ -58,7 +58,7 @@ namespace P_BrawlStars.Clases
         public string actualizar()
         {
             string msj = "";
-            string consulta = $"update Brawler set Nombre = '{Nombre}', Descripcion = '{Descripcion}' idCalidad = {idCalidad}, idTipo = {idTipo}, idMarca = {idMarca}, idRefuerzo1 = '{idRefuerzo1}', idRefuerzo2 = '{idRefuerzo2}, idRefuerzo3 = '{idRefuerzo3}, idRefuerzo4 = '{idRefuerzo4}, idRefuerzo5 = '{idRefuerzo5}, idRefuerzo6 = '{idRefuerzo6}, idRefuerzo7 = '{idRefuerzo7}, idGadget_Uno = '{idGadget_Uno}, idGadget_Dos = '{idGadget_Dos} , idGadget_Dos = '{idGadget_Dos}, idPrimer_Estelar = '{idPrimer_Estelar}, idSegunda_Estelar = '{idPrimer_Estelar}, idHipercarga = {idHipercarga}, idEstadisticasDelBrawler = {idEstadisticasDelBrawler} where id = {id}";
+            string consulta = $"update Brawler set Nombre = '{Nombre}', Descripcion = '{Descripcion}', idCalidad = {idCalidad}, idTipo = {idTipo}, idMarca = {idMarca}, idRefuerzo1 = {idRefuerzo1}, idRefuerzo2 = {idRefuerzo2}, idRefuerzo3 = {idRefuerzo3}, idRefuerzo4 = {idRefuerzo4}, idRefuerzo5 = {idRefuerzo5}, idRefuerzo6 = {idRefuerzo6}, idRefuerzo7 = {idRefuerzo7}, idGadget_Uno = {idGadget_Uno}, idGadget_Dos = {idGadget_Dos}, idPrimer_Estelar = {idPrimer_Estelar}, idSegunda_Estelar = {idSegunda_Estelar}, idHipercarga = {idHipercarga}, idFuerza = {idFuerza} where id = {id}";
             con.Open();
             SqlCommand cmd = new SqlCommand(consulta, con);
             cmd.ExecuteNonQuery();

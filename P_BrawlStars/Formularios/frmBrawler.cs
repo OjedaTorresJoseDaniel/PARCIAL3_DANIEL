@@ -26,8 +26,9 @@ namespace P_BrawlStars.Formularios
         {
             txtId.Clear();
             txtNombre.Clear();
+            txtDescripcion.Clear();
             Clases.Herramientas h = new Herramientas();
-            txtId.Text = h.consecutivo("id", "Fuerza").ToString();
+            txtId.Text = h.consecutivo("id", "Brawler").ToString();
             txtNombre.Focus();
             cargarcbCalidad();
             cargarcbTipo();
@@ -44,7 +45,7 @@ namespace P_BrawlStars.Formularios
             cargarcbEstelar1();
             cargarcbEstelar2();
             cargarcbHipercarga();
-            cargarcbEstadisticasDelBrawler();
+            cargarcbFuerza();
         }
         bool encontro()
         {
@@ -261,22 +262,22 @@ namespace P_BrawlStars.Formularios
             cbHipercarga.DataSource = dt;
 
         }
-        void cargarcbEstadisticasDelBrawler()
+        void cargarcbFuerza()
         {
             DataTable dt = new DataTable();
-            string consulta = "select * from ";
+            string consulta = "select * from Fuerza";
             SqlDataAdapter da = new SqlDataAdapter(consulta, con);
             con.Open();
             da.Fill(dt);
             con.Close();
-            cbEstadisticasDelBrawler.ValueMember = "id";
-            cbEstadisticasDelBrawler.DataSource = dt;
+            cbFuerza.ValueMember = "id";
+            cbFuerza.DataSource = dt;
 
         }
         private void frmBrawler_Load(object sender, EventArgs e)
         {
             Clases.Herramientas h = new Herramientas();
-            txtId.Text = h.consecutivo("id", "Fuerza").ToString();
+            txtId.Text = h.consecutivo("id", "Brawler").ToString();
             cargarcbCalidad();
             cargarcbTipo();
             cargarcbMarca();
@@ -292,7 +293,7 @@ namespace P_BrawlStars.Formularios
             cargarcbEstelar1();
             cargarcbEstelar2();
             cargarcbHipercarga();
-            cargarcbEstadisticasDelBrawler();
+            cargarcbFuerza();
         }
 
         private void tsGuardar_Click(object sender, EventArgs e)
@@ -316,7 +317,7 @@ namespace P_BrawlStars.Formularios
             x.idPrimer_Estelar = int.Parse(cbPrimerEstelar.SelectedValue.ToString());
             x.idSegunda_Estelar = int.Parse(cbSegundaEstelar.SelectedValue.ToString());
             x.idHipercarga = int.Parse(cbHipercarga.SelectedValue.ToString());
-            x.idEstadisticasDelBrawler = int.Parse(cbEstadisticasDelBrawler.SelectedValue.ToString());
+            x.idFuerza = int.Parse(cbFuerza.SelectedValue.ToString());
 
             if (encontro() == true)
             {
@@ -353,7 +354,7 @@ namespace P_BrawlStars.Formularios
                 cbPrimerEstelar.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idPrimer_Estelar"].Value;
                 cbSegundaEstelar.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idSegunda_Estelar"].Value;
                 cbHipercarga.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idHipercarga"].Value;
-                cbEstadisticasDelBrawler.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idEstadisticasDelBrawler"].Value;
+                cbFuerza.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idFuerza"].Value;
 
             }
             
@@ -370,31 +371,60 @@ namespace P_BrawlStars.Formularios
                 txtNombre.Text = reader["Nombre"].ToString();
                 txtDescripcion.Text = reader["Descripcion"].ToString();
                 cbCalidad.SelectedValue = int.Parse(reader["idCalidad"].ToString());
-                cbTipo.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idTipo"].Value;
-                cbMarca.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idMarca"].Value;
-                cbRefuerzo1.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo1"].Value;
-                cbRefuerzo2.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo2"].Value;
-                cbRefuerzo3.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo3"].Value;
-                cbRefuerzo4.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo4"].Value;
-                cbRefuerzo5.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo5"].Value;
-                cbRefuerzo6.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo6"].Value;
-                cbRefuerzo7.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idRefuerzo7"].Value;
-                cbGadget1.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idGadget_Uno"].Value;
-                cbGadget2.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idGadget_Dos"].Value;
-                cbPrimerEstelar.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idPrimer_Estelar"].Value;
-                cbSegundaEstelar.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idSegunda_Estelar"].Value;
-                cbHipercarga.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idHipercarga"].Value;
-                cbEstadisticasDelBrawler.SelectedValue = x.dgBrawlers.SelectedRows[0].Cells["idEstadisticasDelBrawler"].Value;
-                cbSalud.SelectedValue = int.Parse(reader["idSalud"].ToString());
-                cbAtaque.SelectedValue = int.Parse(reader["idAtaque"].ToString());
-                cbSuper.SelectedValue = int.Parse(reader["idSuper"].ToString());
+                cbTipo.SelectedValue = int.Parse(reader["idTipo"].ToString());
+                cbMarca.SelectedValue = int.Parse(reader["idMarca"].ToString());
+                cbRefuerzo1.SelectedValue = int.Parse(reader["idRefuerzo1"].ToString());
+                cbRefuerzo2.SelectedValue = int.Parse(reader["idRefuerzo2"].ToString());
+                cbRefuerzo3.SelectedValue = int.Parse(reader["idRefuerzo3"].ToString());
+                cbRefuerzo4.SelectedValue = int.Parse(reader["idRefuerzo4"].ToString());
+                cbRefuerzo5.SelectedValue = int.Parse(reader["idRefuerzo5"].ToString());
+                cbRefuerzo6.SelectedValue = int.Parse(reader["idRefuerzo6"].ToString());
+                cbRefuerzo7.SelectedValue = int.Parse(reader["idRefuerzo7"].ToString());
+                cbGadget1.SelectedValue = int.Parse(reader["idGadget_Uno"].ToString());
+                cbGadget2.SelectedValue = int.Parse(reader["idGadget_Dos"].ToString());
+                cbPrimerEstelar.SelectedValue = int.Parse(reader["idPrimer_Estelar"].ToString());
+                cbSegundaEstelar.SelectedValue = int.Parse(reader["idSegunda_Estelar"].ToString());
+                cbHipercarga.SelectedValue = int.Parse(reader["idHipercarga"].ToString());
+                cbFuerza.SelectedValue = int.Parse(reader["idFuerza"].ToString());
+
 
             }
             else
             {
-                MessageBox.Show("El Id ingresado no le corresponde a ninguna Fuerza");
+                MessageBox.Show("El Id ingresado no le corresponde a ningun Brawler");
             }
             con.Close();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtId.Text == "0" || txtId.Text == "")
+            {
+                MessageBox.Show("ID no valido");
+            }
+            else
+            {
+                obtener();
+            }
+        }
+
+        private void tsEliminar_Click(object sender, EventArgs e)
+        {
+            Brawler x = new Brawler();
+            x.id = int.Parse(txtId.Text);
+            MessageBox.Show(x.Eliminar());
+            limpiar();
+        }
+
+        private void tsLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            INFORMES.frmRBrawler b = new INFORMES.frmRBrawler();
+            b.ShowDialog();
         }
     }
 }
