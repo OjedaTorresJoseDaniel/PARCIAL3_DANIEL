@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4294F0D-50FF-4160-AC05-F36D1D53EB88}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>P_BrawlStars</RootNamespace>
+    <AssemblyName>P_BrawlStars</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Busquedas\frmBusquedaAtaque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaAtaque.Designer.cs">
+      <DependentUpon>frmBusquedaAtaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaBrawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaBrawler.Designer.cs">
+      <DependentUpon>frmBusquedaBrawler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCalidad.Designer.cs">
+      <DependentUpon>frmBusquedaCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCopa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCopa.Designer.cs">
+      <DependentUpon>frmBusquedaCopa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCuartoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaCuartoRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaCuartoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaEstadisticasDelBrawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaEstadisticasDelBrawler.Designer.cs">
+      <DependentUpon>frmBusquedaEstadisticasDelBrawler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaFuerza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaFuerza.Designer.cs">
+      <DependentUpon>frmBusquedaFuerza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaHipercarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaHipercarga.Designer.cs">
+      <DependentUpon>frmBusquedaHipercarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaMarca.Designer.cs">
+      <DependentUpon>frmBusquedaMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPrimerEstelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPrimerEstelar.Designer.cs">
+      <DependentUpon>frmBusquedaPrimerEstelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPrimerGadget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPrimerGadget.Designer.cs">
+      <DependentUpon>frmBusquedaPrimerGadget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPrimerRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaPrimerRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaPrimerRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaQuintoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaQuintoRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaQuintoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSalud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSalud.Designer.cs">
+      <DependentUpon>frmBusquedaSalud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSegundaEstelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSegundaEstelar.Designer.cs">
+      <DependentUpon>frmBusquedaSegundaEstelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSegundoGadget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSegundoGadget.Designer.cs">
+      <DependentUpon>frmBusquedaSegundoGadget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSegundoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSegundoRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaSegundoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSeptimoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSeptimoRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaSeptimoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSextoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSextoRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaSextoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaSuper.Designer.cs">
+      <DependentUpon>frmBusquedaSuper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaTercerRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaTercerRefuerzo.Designer.cs">
+      <DependentUpon>frmBusquedaTercerRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busquedas\frmBusquedaTipo.Designer.cs">
+      <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Ataque.cs" />
+    <Compile Include="Clases\Brawler.cs" />
+    <Compile Include="Clases\Calidad.cs" />
+    <Compile Include="Clases\ConexionSQL.cs" />
+    <Compile Include="Clases\Copa.cs" />
+    <Compile Include="Clases\CuartoRefuerzo.cs" />
+    <Compile Include="Clases\EstadisticasDelBrawler.cs" />
+    <Compile Include="Clases\Fuerza.cs" />
+    <Compile Include="Clases\Herramientas.cs" />
+    <Compile Include="Clases\Hipercarga.cs" />
+    <Compile Include="Clases\Marca.cs" />
+    <Compile Include="Clases\PrimerEstelar.cs" />
+    <Compile Include="Clases\PrimerGadget.cs" />
+    <Compile Include="Clases\PrimerRefuerzo.cs" />
+    <Compile Include="Clases\QuintoRefuerzo.cs" />
+    <Compile Include="Clases\Salud.cs" />
+    <Compile Include="Clases\SegundaEstelar.cs" />
+    <Compile Include="Clases\SegundoGadget.cs" />
+    <Compile Include="Clases\SegundoRefuerzo.cs" />
+    <Compile Include="Clases\SeptimoRefuerzo.cs" />
+    <Compile Include="Clases\SextoRefuerzo.cs" />
+    <Compile Include="Clases\Super.cs" />
+    <Compile Include="Clases\TercerRefuerzo.cs" />
+    <Compile Include="Clases\Tipo.cs" />
+    <Compile Include="Formularios\frmAtaque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAtaque.Designer.cs">
+      <DependentUpon>frmAtaque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmBrawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmBrawler.Designer.cs">
+      <DependentUpon>frmBrawler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCalidad.Designer.cs">
+      <DependentUpon>frmCalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCopas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCopas.Designer.cs">
+      <DependentUpon>frmCopas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmCuartoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmCuartoRefuerzo.Designer.cs">
+      <DependentUpon>frmCuartoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmEstadisticasDelBrawler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmEstadisticasDelBrawler.Designer.cs">
+      <DependentUpon>frmEstadisticasDelBrawler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmFuerza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmFuerza.Designer.cs">
+      <DependentUpon>frmFuerza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmHipercarga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmHipercarga.Designer.cs">
+      <DependentUpon>frmHipercarga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMarca.Designer.cs">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrimerEstelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrimerEstelar.Designer.cs">
+      <DependentUpon>frmPrimerEstelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrimerGadget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrimerGadget.Designer.cs">
+      <DependentUpon>frmPrimerGadget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPrimerRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPrimerRefuerzo.Designer.cs">
+      <DependentUpon>frmPrimerRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmQuintoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmQuintoRefuerzo.Designer.cs">
+      <DependentUpon>frmQuintoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSalud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSalud.Designer.cs">
+      <DependentUpon>frmSalud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSegundaEstelar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSegundaEstelar.Designer.cs">
+      <DependentUpon>frmSegundaEstelar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSegundoGadget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSegundoGadget.Designer.cs">
+      <DependentUpon>frmSegundoGadget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSegundoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSegundoRefuerzo.Designer.cs">
+      <DependentUpon>frmSegundoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSeptimoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSeptimoRefuerzo.Designer.cs">
+      <DependentUpon>frmSeptimoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSextoRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSextoRefuerzo.Designer.cs">
+      <DependentUpon>frmSextoRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmSuper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmSuper.Designer.cs">
+      <DependentUpon>frmSuper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTercerRefuerzo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTercerRefuerzo.Designer.cs">
+      <DependentUpon>frmTercerRefuerzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmTipo.Designer.cs">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Busquedas\frmBusquedaAtaque.resx">
+      <DependentUpon>frmBusquedaAtaque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaBrawler.resx">
+      <DependentUpon>frmBusquedaBrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaCalidad.resx">
+      <DependentUpon>frmBusquedaCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaCopa.resx">
+      <DependentUpon>frmBusquedaCopa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaCuartoRefuerzo.resx">
+      <DependentUpon>frmBusquedaCuartoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaEstadisticasDelBrawler.resx">
+      <DependentUpon>frmBusquedaEstadisticasDelBrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaFuerza.resx">
+      <DependentUpon>frmBusquedaFuerza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaHipercarga.resx">
+      <DependentUpon>frmBusquedaHipercarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaMarca.resx">
+      <DependentUpon>frmBusquedaMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaPrimerEstelar.resx">
+      <DependentUpon>frmBusquedaPrimerEstelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaPrimerGadget.resx">
+      <DependentUpon>frmBusquedaPrimerGadget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaPrimerRefuerzo.resx">
+      <DependentUpon>frmBusquedaPrimerRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaQuintoRefuerzo.resx">
+      <DependentUpon>frmBusquedaQuintoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSalud.resx">
+      <DependentUpon>frmBusquedaSalud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSegundaEstelar.resx">
+      <DependentUpon>frmBusquedaSegundaEstelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSegundoGadget.resx">
+      <DependentUpon>frmBusquedaSegundoGadget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSegundoRefuerzo.resx">
+      <DependentUpon>frmBusquedaSegundoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSeptimoRefuerzo.resx">
+      <DependentUpon>frmBusquedaSeptimoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSextoRefuerzo.resx">
+      <DependentUpon>frmBusquedaSextoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaSuper.resx">
+      <DependentUpon>frmBusquedaSuper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaTercerRefuerzo.resx">
+      <DependentUpon>frmBusquedaTercerRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busquedas\frmBusquedaTipo.resx">
+      <DependentUpon>frmBusquedaTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmAtaque.resx">
+      <DependentUpon>frmAtaque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmBrawler.resx">
+      <DependentUpon>frmBrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCalidad.resx">
+      <DependentUpon>frmCalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCopas.resx">
+      <DependentUpon>frmCopas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmCuartoRefuerzo.resx">
+      <DependentUpon>frmCuartoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmEstadisticasDelBrawler.resx">
+      <DependentUpon>frmEstadisticasDelBrawler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmFuerza.resx">
+      <DependentUpon>frmFuerza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmHipercarga.resx">
+      <DependentUpon>frmHipercarga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMarca.resx">
+      <DependentUpon>frmMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrimerEstelar.resx">
+      <DependentUpon>frmPrimerEstelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrimerGadget.resx">
+      <DependentUpon>frmPrimerGadget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPrimerRefuerzo.resx">
+      <DependentUpon>frmPrimerRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmQuintoRefuerzo.resx">
+      <DependentUpon>frmQuintoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSalud.resx">
+      <DependentUpon>frmSalud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSegundaEstelar.resx">
+      <DependentUpon>frmSegundaEstelar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSegundoGadget.resx">
+      <DependentUpon>frmSegundoGadget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSegundoRefuerzo.resx">
+      <DependentUpon>frmSegundoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSeptimoRefuerzo.resx">
+      <DependentUpon>frmSeptimoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSextoRefuerzo.resx">
+      <DependentUpon>frmSextoRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmSuper.resx">
+      <DependentUpon>frmSuper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmTercerRefuerzo.resx">
+      <DependentUpon>frmTercerRefuerzo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmTipo.resx">
+      <DependentUpon>frmTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_of_Brawl_Stars.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
