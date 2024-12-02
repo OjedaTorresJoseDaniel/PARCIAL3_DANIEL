@@ -658,6 +658,7 @@
     <None Include="Resources\lupa1.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Busquedas\pa que agarre el git\" />
     <Folder Include="Formularios\unacarpeta\" />
   </ItemGroup>
   <ItemGroup>
