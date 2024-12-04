@@ -30,6 +30,7 @@ namespace P_BrawlStars.INFORMES
             //this.rvMarca.RefreshReport();
             // this.reportViewer2.RefreshReport();
             //this.rvMarca.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
         void cargarcb()
         {

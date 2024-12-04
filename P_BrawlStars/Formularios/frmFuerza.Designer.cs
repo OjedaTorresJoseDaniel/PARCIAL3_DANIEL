@@ -34,6 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.id = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsGuardar = new System.Windows.Forms.ToolStripButton();
+            this.tsBuscar = new System.Windows.Forms.ToolStripButton();
+            this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
+            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -45,10 +49,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.tsGuardar = new System.Windows.Forms.ToolStripButton();
-            this.tsBuscar = new System.Windows.Forms.ToolStripButton();
-            this.tsLimpiar = new System.Windows.Forms.ToolStripButton();
-            this.tsEliminar = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
@@ -83,12 +83,12 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Cooper Black", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(314, 119);
+            this.label2.Location = new System.Drawing.Point(327, 119);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
+            this.label2.Size = new System.Drawing.Size(52, 19);
             this.label2.TabIndex = 73;
-            this.label2.Text = "Nombre";
+            this.label2.Text = "Nivel";
             // 
             // id
             // 
@@ -116,6 +116,50 @@
             this.toolStrip1.Size = new System.Drawing.Size(750, 39);
             this.toolStrip1.TabIndex = 71;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // tsGuardar
+            // 
+            this.tsGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
+            this.tsGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsGuardar.Name = "tsGuardar";
+            this.tsGuardar.Size = new System.Drawing.Size(36, 36);
+            this.tsGuardar.Text = "buscar";
+            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
+            // 
+            // tsBuscar
+            // 
+            this.tsBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
+            this.tsBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsBuscar.Name = "tsBuscar";
+            this.tsBuscar.Size = new System.Drawing.Size(36, 36);
+            this.tsBuscar.Text = "Buscar";
+            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
+            // 
+            // tsLimpiar
+            // 
+            this.tsLimpiar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
+            this.tsLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsLimpiar.Name = "tsLimpiar";
+            this.tsLimpiar.Size = new System.Drawing.Size(36, 36);
+            this.tsLimpiar.Text = "Limpiar";
+            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
+            // 
+            // tsEliminar
+            // 
+            this.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
+            this.tsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsEliminar.Name = "tsEliminar";
+            this.tsEliminar.Size = new System.Drawing.Size(36, 36);
+            this.tsEliminar.Text = "Elminar";
+            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // label1
             // 
@@ -239,50 +283,6 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // tsGuardar
-            // 
-            this.tsGuardar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsGuardar.Image = ((System.Drawing.Image)(resources.GetObject("tsGuardar.Image")));
-            this.tsGuardar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsGuardar.Name = "tsGuardar";
-            this.tsGuardar.Size = new System.Drawing.Size(36, 36);
-            this.tsGuardar.Text = "buscar";
-            this.tsGuardar.Click += new System.EventHandler(this.tsGuardar_Click);
-            // 
-            // tsBuscar
-            // 
-            this.tsBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsBuscar.Image = ((System.Drawing.Image)(resources.GetObject("tsBuscar.Image")));
-            this.tsBuscar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsBuscar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsBuscar.Name = "tsBuscar";
-            this.tsBuscar.Size = new System.Drawing.Size(36, 36);
-            this.tsBuscar.Text = "Buscar";
-            this.tsBuscar.Click += new System.EventHandler(this.tsBuscar_Click);
-            // 
-            // tsLimpiar
-            // 
-            this.tsLimpiar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("tsLimpiar.Image")));
-            this.tsLimpiar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsLimpiar.Name = "tsLimpiar";
-            this.tsLimpiar.Size = new System.Drawing.Size(36, 36);
-            this.tsLimpiar.Text = "Limpiar";
-            this.tsLimpiar.Click += new System.EventHandler(this.tsLimpiar_Click);
-            // 
-            // tsEliminar
-            // 
-            this.tsEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsEliminar.Image = ((System.Drawing.Image)(resources.GetObject("tsEliminar.Image")));
-            this.tsEliminar.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.tsEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsEliminar.Name = "tsEliminar";
-            this.tsEliminar.Size = new System.Drawing.Size(36, 36);
-            this.tsEliminar.Text = "Elminar";
-            this.tsEliminar.Click += new System.EventHandler(this.tsEliminar_Click);
             // 
             // pictureBox1
             // 
